@@ -1,0 +1,36 @@
+// out: ../include/css/main.css, compress:true, sourceMap: true
+
+/*Variables*/
+
+@grass: #009900;
+
+h1 {
+	color:@grass;
+}
+
+/*Mixins*/
+
+.panel{
+    border: 3px solid blue;
+    margin: auto;
+}
+
+.other-panel{
+    .panel ;
+    background :cyan;
+    padding :5px;
+}
+
+/*Nesting*/
+#navThing{
+
+    a:link{
+        color:brown;
+        display: block;
+        padding:8px;
+    }
+
+    a:hover{
+        color: chartreuse;
+    }
+}
