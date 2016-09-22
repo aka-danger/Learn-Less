@@ -1,8 +1,10 @@
-// out: ../include/css/main.css, compress:true, sourceMap: true
+// out: ../include/css/main.css, sourceMap: true
 
 /*Variables*/
 
 @grass: #009900;
+//FILES
+@import "img.less";
 
 h1 {
 	color:@grass;
@@ -21,7 +23,8 @@ h1 {
     padding :5px;
 }
 
-/*Nesting*/
+
+/*Nesting rules*/
 #navThing{
 
     a:link{
@@ -34,3 +37,47 @@ h1 {
         color: chartreuse;
     }
 }
+
+
+
+/*Nesing conditions*/
+#banner{
+    font-size: 24;
+    background-color: aqua;
+}
+
+/*anything less than 768ox is a phone or tablet*/
+@media screen and (max-width:768px){
+    #banner{
+        font-size: 12;
+        background-color: forestgreen;
+    }
+}
+
+/*Simple operations*/
+@buttonBackground: royalblue;
+@buttonColor:  olivedrab;
+@buttonPadding: 5px;
+
+
+.button{
+    background: @buttonBackground;
+    color: @buttonColor;
+    padding: @buttonPadding;
+    display:inline-block;
+}
+
+.jumbo-button{
+    .button;
+    padding: @buttonPadding *30;
+    border: 3px solid black;
+}
+
+.like-button{
+    .button;
+    background: @buttonBackground *1.8;    
+}
+/*Extra less*/
+//Can comment with these
+
+
